@@ -1,0 +1,556 @@
+html {
+    scroll-behavior: smooth;
+    background-color: rgb(14, 14, 14);
+}
+body {
+    margin: 0;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 120px;
+    border-bottom: 1px solid rgb(97, 97, 97);
+    background-color: rgb(14, 14, 14);
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+.headerL {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 40%;
+    gap: 40px;
+}
+.headerL p{
+    font-size: 10px;
+    color: white;
+}
+.headerR {
+    width: 50%;
+}
+.headerL img{
+    height: 100px;
+    width: 100px;
+    padding-left: 10px;
+}
+.headerR input {
+    width: 60%;
+    height: 30px;
+}
+#search {
+    /* display: none; */
+    visibility: hidden;
+    border: unset;
+    border-radius: 10px;
+    background-color: rgb(114, 114, 114);
+    color: white;
+}
+#search::placeholder {
+    color: white;
+}
+#search:focus{
+    outline: none;
+}
+#searchBtn {
+    cursor: pointer;
+}
+/* Header Ende  */
+/* Popup */
+#popupBg {
+    visibility: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: 20;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#popup {
+    width: 80%;
+    background-color: black;
+    height: 80%;
+    display: flex;
+    justify-content: flex-start;
+    /* align-items: center; */
+    flex-direction: column;
+    border: 1px solid white;
+    color: white;
+    position: relative;
+}
+#imagePopup {
+    height: 60%;
+    width: 100%;
+    object-fit: cover;
+}
+.imgbox img {
+    height: 200px;
+    width: 300px;
+    cursor: pointer;
+}
+.imgbox:hover img{
+    opacity: 0.9;   
+}
+.user {
+    color: white;
+}
+.popupDesc {
+    margin-left: 10px;
+    margin-top: 20px;
+    font-size: 24px;
+    color: rgb(255, 107, 107);
+}
+.popupComment {
+    margin-left: 10px;
+    margin-top: 20px;
+}
+.popupTitle p{
+    position: absolute;
+    right: 4px;
+    font-size: 16px;
+    top: 28px;
+}
+.popupTitle {
+    position: relative;
+    font-size: 28px;
+    padding-left: 10px;
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 16px;
+}
+.popupTitle img {
+    position: absolute;
+    right: 4px;
+    width: 50px;
+    height: 50px;
+}
+/* Popup Ende  */
+/* Settings links  */
+#settings {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.0);
+    height: 100vh;
+    border-right: 1px solid rgb(97, 97, 97);
+}
+#settings a {
+    height: 40px;
+    width: 40px;
+    margin-left: 16px;
+    margin-bottom: 30px;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+}
+.settingsImage {
+    height: 40px;
+    width: 40px;
+}
+#settings a:first-child{
+    margin-top: 140px;
+}
+
+
+/* Mainpage aga die Mitte  */
+#mainpage {
+    display: flex;
+    flex-direction: row;
+}
+#postcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    padding-top: 130px;
+}
+.content {
+    height: 800px;
+    width: 700px;
+    border: 1px solid black;
+    color: white;
+    background-color: rgba(54, 54, 54, 0.0);
+    box-shadow: rgba(104, 104, 104, 0.35) 0px 5px 15px;
+    margin-bottom: 100px;
+    position: relative;
+}
+.titleImg{
+    aspect-ratio: 16/9;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+    cursor: pointer;
+}
+.comment {
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 14px;
+    color: white;
+}
+.commentDiv {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.commentInput{
+    background-color: rgba(0, 0, 0, 0.0);
+    width: 99%;
+    height: 30px;
+    color: white;
+    border: unset;
+}
+.commentInput::placeholder {
+    color: white;
+}
+.commentInput:focus{
+    outline: none;
+}
+.user {
+    font-size: 36px;
+    padding-left: 10px;
+    margin: 10px 0px;
+    display: flex;
+    gap: 20px;
+}
+.user img{
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    border-radius: 50%;
+}
+.title {
+    font-size: 28px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 16px;
+}
+.description {
+    font-size: 14px;
+    padding-left: 10px;
+    color: rgb(255, 107, 107);;
+}
+.postBtn {
+    color: rgb(126, 103, 212);
+    background-color: rgba(0, 0, 0, 0.0);
+    border: unset;
+    cursor: pointer;
+}
+.postBtn:hover{
+    color: aqua;
+}
+.title img {
+    width: 30px;
+    height: 30px;
+}
+.title p{
+    position: absolute;
+    right: 4px;
+    font-size: 16px;
+    top: 574px;
+}
+.cursor {
+    cursor: pointer;
+}
+/* Fwiends aka Rechts  */
+#friends {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.0);
+    height: 100vh;
+    border-left: 1px solid rgb(97, 97, 97);
+}
+#friends h2 {
+    margin-left: 10px;
+    margin-top: 140px;
+    color: white;
+    font-size: 20px;
+}
+.userfriends {
+    display: flex;
+    flex-direction: row;
+    height: 70px;
+    align-items: center;
+    gap: 10px;
+    margin-left: 10px;
+}
+.userfriends h3 {
+    font-size: 18px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.userfriends:first-child {
+    margin-top: 140px;
+}
+.userfriends img{
+    height: 50px;
+    background-color: white;   
+    border-radius: 50%; 
+}
+.friendBtn {
+    color: rgb(126, 103, 212);
+    background-color: rgba(0, 0, 0, 0.0);
+    border: unset;
+    cursor: pointer;
+    width: 50px;
+    position: relative;
+    right: 0;
+}
+.friendBtn:hover{
+    color: aqua;
+}
+
+/* Profile  */
+#profile {
+    padding-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.head {
+    height: 300px;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 60px;
+}
+.head img {
+    background-color: white;
+    border-radius: 50%;
+    width: 200px;
+}
+.profileText {
+    display: flex;
+    flex-direction: column;
+
+}
+.profileText h2{
+    margin-block-start: 0;
+}
+.spacer {
+    width: 100%;
+    height: 1px;
+    background-color: gray;
+}
+#album {
+    width: 80%;
+    display: flex;
+}
+.albumBtn{
+    background-color: rgba(0, 0, 0, 0.0);
+    margin-right: 50px;
+    margin-left: 50px;
+    border: unset;
+    color: white;
+    cursor: pointer;
+    padding-top: 10px;
+}
+.albumBtn:hover {
+    border-top: 1px solid white;
+    padding-top: 9px;
+}
+#albumImgs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 20px;
+    justify-content: center;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+#btnL {
+    font-size: 40px;
+    background-color: rgba(0,0,0,0);
+    color: white;
+    border: unset;
+    cursor: pointer;}
+#btnR {
+    font-size: 40px;
+    background-color: rgba(0,0,0,0);
+    color: white;
+    border: unset;
+    cursor: pointer;
+}
+#profileImg {
+    object-fit: cover;
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+#profilePopup {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+
+@media (max-width: 1200px){
+    #settings {
+        width: 80px;
+    }
+    #settings p {
+        visibility: hidden;
+    }
+    #friends {
+        visibility: hidden;
+    }
+    #mainpage {
+        margin-left: 80px;
+    }
+}
+@media (max-width: 950px) {
+    .content {
+        width: 500px;
+        height: 650px;
+    }
+    .titleImg{
+        height: 400px;
+    }
+    .title p {
+        top: 476px;
+    }
+    .headerL {
+        width: 60%;
+    }
+    .headerR {
+        width: 40%;
+    }
+    .search {
+        visibility: hidden;
+        
+    }
+}
+@media (max-width: 630px) {
+    .headerL {
+        width: 100%;
+    }
+    header {
+        height: 70px;
+
+    }
+    .headerL img{
+        height: 60px;
+        width: 60px;
+    }
+    #postcontainer {
+        padding-top: 140px;
+    }
+    .headerR {
+        position: absolute;
+        top: 154px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 30%;
+    }
+    #search {
+        width: 100%;
+        height: 34px;
+    }
+    #settings {
+        right: 0;
+        height: 130px;
+        width: 100%;
+        flex-direction: row;
+        top: 0;
+        justify-content: space-between;
+        border-right: unset;
+        z-index: 9;
+        position: fixed;
+        background-color: rgb(14,14,14);
+        border-bottom: 1px solid rgb(97, 97, 97);
+       }
+    #settings a:first-child{
+        margin-top: 80px;
+    }
+    #settings a{
+        margin-top: 80px;
+        margin-right: 20px;
+    }
+    #mainpage {
+        margin-top: 40px;
+        margin-left: 0;
+    }
+}
+@media (max-width: 560px) {
+    .content {
+        width: 98%;
+        box-shadow: unset;
+    }
+    .albumBtn {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .description, .popupDesc{
+        font-size: 18px;
+    }
+    .comment, .popupComment {
+        font-size: 12px;
+    }
+}
+@media (max-width: 460px) {
+    #profilePopup {
+        gap: 0;
+    }
+}
+@media (max-width: 400px) {
+    .settingsImage {
+        width: 28px;
+        height: 28px;
+    }
+    #settings a{
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+    .headerL h1 {
+        font-size: 28px;
+    }
+    .albumBtn {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+@media (max-width: 330px) {
+    .albumBtn {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .headerL h1 {
+        font-size: 24px;
+    }
+    .description, .popupDesc{
+        font-size: 16px;
+    }
+    .comment, .popupComment {
+        font-size: 12px;
+    }
+}

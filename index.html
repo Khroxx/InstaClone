@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlyFwiends</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+</head>
+<body onload="show(), renderFriends()">
+    <header>
+        <div class="headerL"><img src="img/logo.png" alt=""><h1>Only Fwiends<p>by Bari Sopa</p></h1></div>
+        <div class="headerR"><input onkeyup="searchUser()" id="search" type="search" placeholder="Suche nach User..."></div>
+    </header>
+    <div id="popupBg">
+        <div id="popup" class="popup">
+        </div>
+    </div>
+    <div id="mainpage">
+        <div id="settings">
+            <a href="index.html"><img class="settingsImage" src="settings/home.png" alt=""><p>Startseite</p></a>
+            <a id="searchBtn" href="#"><img class="settingsImage" src="settings/search.png" alt=""><p>Suchen...</p></a>
+            <a href="#"><img class="settingsImage" src="settings/message.png" alt=""><p>Benarchrichtigungen</p></a>
+            <a href="#"><img class="settingsImage" src="settings/create.png" alt=""><p>Post erstellen...</p></a>
+            <a href="profile.html"><img class="settingsImage" src="settings/user.png" alt=""><p>Profil</p></a>
+        </div>
+        <div id="postcontainer"></div>
+        <div id="friends"></div>
+    </div>
+</body>
+</html>
